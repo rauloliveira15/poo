@@ -202,22 +202,8 @@ public class TelaCalculadora extends JFrame implements WindowListener, ActionLis
         }
         if(e.getSource()==btnIgual){
             calculadora.setNumero2(Double.parseDouble(txtVisor.getText()));
-            if(calculadora.getOperador().equals("+")){
-                calculadora.setResultado(calculadora.calcular(calculadora.getNumero1(),calculadora.getNumero2(),calculadora.getOperador()));
-                txtVisor.setText(String.valueOf(calculadora.getResultado()));
-            }
-            if(calculadora.getOperador().equals("-")){
-                calculadora.setResultado(calculadora.calcular(calculadora.getNumero1(),calculadora.getNumero2(),calculadora.getOperador()));
-                txtVisor.setText(String.valueOf(calculadora.getResultado()));
-            }
-            if(calculadora.getOperador().equals("*")){
-                calculadora.setResultado(calculadora.calcular(calculadora.getNumero1(),calculadora.getNumero2(),calculadora.getOperador()));
-                txtVisor.setText(String.valueOf(calculadora.getResultado()));
-            }
-            if(calculadora.getOperador().equals("/")){
-                calculadora.setResultado(calculadora.calcular(calculadora.getNumero1(),calculadora.getNumero2(),calculadora.getOperador()));
-                txtVisor.setText(String.valueOf(calculadora.getResultado()));
-            }
+            calculadora.setResultado(calculadora.calcular(calculadora.getNumero1(),calculadora.getNumero2(),calculadora.getOperador()));
+            txtVisor.setText(String.valueOf(calculadora.getResultado()));
         }
     }
 
